@@ -29,7 +29,9 @@ a {
 // .logologo {
 //     text-align: center;
 // }
-
+#icons{
+    margin: 1rem;
+}
 .presents {
     display: flex;
     justify-content: center;
