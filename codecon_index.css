@@ -1,3 +1,5 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap');
 
 * {
@@ -5,13 +7,24 @@
     background-color: #191825;
     // color: #865DFF;
     text-decoration: none;
+    overflow-x: hidden;
 }
 
-nav {
+.nav {
     display: flex;
     justify-content: space-between;
     margin: 2rem;
     font-size: 20px;
+    color: #E384FF;
+}
+
+.short {
+    display: none;
+}
+
+a {
+    margin-left: 1rem;
+    margin-right: 1rem;
     color: #E384FF;
 }
 
@@ -22,15 +35,6 @@ nav {
     font-weight: 700;
 }
 
-.short {
-    display: none;
-}
-
-a {
-    /* margin-left: 1rem; */
-    margin-right: 1rem;
-    color: #E384FF;
-}
 
 label {
     color: white;
