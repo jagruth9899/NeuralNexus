@@ -252,10 +252,11 @@
         <input type="text" id="member4Roll" name="transactionid" required>
 
         <center>
-            <input type="submit" value="Submit" name="submit">
+            <div id="subb">
+                <input type="submit" value="Submit" name="submit" onclick="clickk()">
+            </div>
         </center>
-        <h5 style="text-align: center; color: #E384FF;">Pleae wait until you get a prompt saying "Succesfully
-            Registered!"</h5>
+        <h3 style="text-align: center; color: #E384FF;">Please wait until you get redirected to another page</h3>
         <h3 style="text-align: center;">Contact</h3>
         <h3 style="text-align: center;">Thousifuddin : +91 98846 39786</h2>
             <h3 style="text-align: center;">Yagna Praneeth : +91 95530 00088</h2>
@@ -267,10 +268,15 @@
     </center>
 </body>
 <script>
-    // Set the date we're counting down to
     var countDownDate = new Date("July 10, 2023 23:59:59").getTime();
-
-    // Update the count down every 1 second
+    var submitbtn = document.getElementById('subb');
+    function clickk() {
+        submitbtn.style.display = "None";
+    }
+    function aftersubmit() {
+        // submitbtn.innerHTML = "<p>Redirecting...</p>";
+        location.replace("https://chat.whatsapp.com/CAiIXToRuMQL7KANmSwmMt")
+    }
     var x = setInterval(function () {
 
         // Get today's date and time
@@ -302,7 +308,7 @@
     form.addEventListener('submit', e => {
         e.preventDefault()
         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-            .then(response => alert("Succesfully Registered!"))
+            .then(response => aftersubmit())
             .catch(error => console.error('Error!', error.message))
     })
 </script>
