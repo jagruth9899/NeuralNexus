@@ -292,7 +292,8 @@
                 <input type="submit" value="Submit" name="submit" onclick="clickk()">
             </div>
         </center>
-        <h3 style="text-align: center; color: #E384FF;">Please wait until you get redirected to another page</h3>
+        <h3 id="red" style="text-align: center; color: #E384FF;">Please wait until you get redirected to another page
+        </h3>
         <h3 style="text-align: center;">Contact</h3>
         <h3 style="text-align: center;">Thousifuddin : +91 98846 39786</h2>
             <h3 style="text-align: center;">Yagna Praneeth : +91 95530 00088</h2>
@@ -306,12 +307,14 @@
 <script>
     var countDownDate = new Date("July 10, 2023 23:59:59").getTime();
     var submitbtn = document.getElementById('subb');
+    var redd = document.getElementById('red');
     function clickk() {
         submitbtn.style.display = "None";
     }
     function aftersubmit() {
         // submitbtn.innerHTML = "<p>Redirecting...</p>";
-        alert("Registered successfully!");
+        // alert("Registered successfully!");
+        redd.innerText = "Registered Successfully";
         location.replace("https://chat.whatsapp.com/CAiIXToRuMQL7KANmSwmMt")
     }
     var x = setInterval(function () {
